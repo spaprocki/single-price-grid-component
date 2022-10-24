@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+/* Design system styles */
+
+:root {
+  --bright-yellow: hsl(71, 73%, 54%);
+  --cyan: hsl(179, 62%, 43%);
+  --light-cyan: hsla(179, 62%, 43%, 0.85);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --light-gray: hsl(204, 43%, 93%);
+}
+
+/* General styling */
+
+body {
+  background: var(--light-gray);
+  font-family: 'Karla', 'sans-serif';
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem 5rem 2rem;
+  position: relative;
+}
+
+.grid-container {
+  background-color: #ffffff;
+  border-radius: clamp(0.3125rem, 0.25rem + 0.28vw, 0.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.grid-item {
+  width: clamp(19.4375rem, 18.93rem + 2.15vw, 19.875rem);
+  height: clamp(14.1875rem, 13.5rem + 3vw, 16.1875rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  padding: clamp(1.5rem, 1.15rem + 1.5vw, 2.5rem);
+}
+
+.item-heading {
+  font-weight: 700;
+  font-size: clamp(0.9375rem, 0.87rem + 0.28vw, 1.125rem);
+  line-height: 1.3125rem;
+  letter-spacing: -0.0141rem;
+  margin-bottom: 1.125rem;
+}
+
+.item-paragraph {
+  font-size: clamp(0.875rem, 0.83rem + 0.18vw, 1rem);
+  line-height: 1.625rem;
+  letter-spacing: -0.0125rem;
+}
+
+/* Specific cards styling */
+
+.main-heading {
+  font-size: clamp(1.25rem, 1.16rem + 0.37vw, 1.5rem);
+  margin-bottom: 1.5rem;
+  color: var(--cyan);
+}
+
+.join-our-community {
+  height: 16.6875rem;
+}
+
+.join-our-community .item-heading {
+  color: var(--bright-yellow);
+  margin-bottom: clamp(0.6875rem, 1.11rem - 0.47vw, 1rem);
+}
+
+.join-our-community .item-paragraph {
+  color: var(--grayish-blue);
+}
+
+.monthly-subscription {
+  background-color: var(--cyan);
+}
+
+.price-per-month {
+  display: flex;
+  gap: 0.6875rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.3125rem;
+  letter-spacing: -0.025rem;
+}
+
+.per-month {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  letter-spacing: -0.0125rem;
+  opacity: 0.5;
+}
+
+.monthly-subscription .item-paragraph {
+  margin-top: 0.25rem;
+  margin-bottom: 1.625rem;
+}
+
+.sign-up {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  letter-spacing: -0.0125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.9375rem;
+  background-color: var(--bright-yellow);
+  border-radius: 0.3125rem;
+  transition: transform ease-in-out 0.1s;
+}
+
+.sign-up:hover {
+  transform: scale(1.01);
+}
+
+.why-us {
+  background-color: var(--light-cyan);
+}
+
+.list-item {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: -0.0109rem;
+  opacity: 0.75;
+}
+
+footer {
+  flex: none;
+  bottom: 0px;
+  position: absolute;
+}
+
+.attribution {
+  font-family: 'Montserrat', 'sans-serif';
+  justify-self: flex-end;
+  padding: 0.625rem;
+  width: 100%;
+  text-align: center;
+  background-color: var(--soft-blue);
+  color: var(--cyan);
+}
+
+.attribution a,
+.attribution a:visited {
+  text-decoration: underline;
+  color: var(--very-dark-blue-main-bg);
+}
+
+.attribution a:hover {
+  font-weight: 500;
+}
+
+@media (min-width: 700px) {
+  .grid-container {
+    width: 39.6875rem;
+    display: grid;
+    grid-template-areas:
+      'community community'
+      'monthly why-us';
+  }
+
+  .join-our-community {
+    grid-area: community;
+    height: 13.5rem;
+    width: 100%;
+  }
+
+  .monthly-subscription {
+    grid-area: monthly;
+    align-self: center;
+  }
+
+  .why-us {
+    grid-area: why-us;
+  }
+}
