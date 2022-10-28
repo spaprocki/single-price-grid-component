@@ -74,7 +74,11 @@ body {
   height: 16.6875rem;
 }
 
-.join-our-community .item-heading {
+.green-paragraph {
+  font-weight: 700;
+  font-size: clamp(0.9375rem, 0.87rem + 0.28vw, 1.125rem);
+  line-height: 1.3125rem;
+  letter-spacing: -0.0141rem;
   color: var(--bright-yellow);
   margin-bottom: clamp(0.6875rem, 1.11rem - 0.47vw, 1rem);
 }
